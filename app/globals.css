@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+@theme {
+  /* Dark flat design palette */
+  --color-coral: #f0b429;
+  --color-coral-light: #f7c948;
+  --color-mint: #38b2ac;
+  --color-mint-light: #4fd1c5;
+  --color-sunny: #f0b429;
+  --color-sunny-dark: #d69e2e;
+  --color-lavender: #a78bfa;
+  --color-lavender-light: #c4b5fd;
+  --color-sky: #63b3ed;
+  --color-peach: #f6ad55;
+  --color-orange: #ed8936;
+
+  /* Dark neutrals */
+  --color-cream: #0f0f1a;
+  --color-warm-white: #1a1a2e;
+  --color-card: #1e1e32;
+  --color-card-hover: #25253d;
+  --color-text: #f0f0f0;
+  --color-text-light: #b0b0c0;
+  --color-text-muted: #6b6b80;
+  --color-border: #2a2a40;
+
+  --font-sans: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-cream);
+}
+
+::selection {
+  background-color: var(--color-coral);
+  color: var(--color-cream);
+}
+
+/* Gradient text — gold to teal */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-coral), var(--color-mint));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-mint {
+  background: linear-gradient(135deg, var(--color-mint), var(--color-sky));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Flat card */
+.card-playful {
+  background: var(--color-card);
+  border-radius: 1rem;
+  border: 1px solid var(--color-border);
+  transition: all 0.3s ease;
+}
+
+.card-playful:hover {
+  border-color: var(--color-coral);
+  transform: translateY(-2px);
+}
+
+/* Bounce in animation */
+@keyframes bounceIn {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.5s ease-out forwards;
+}
+
+/* Wiggle animation */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+.hover-wiggle:hover {
+  animation: wiggle 0.4s ease-in-out;
+}
+
+/* Emoji pulse */
+@keyframes emojiPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.emoji-pulse:hover {
+  animation: emojiPulse 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Section background patterns */
+.bg-dots {
+  background-image: radial-gradient(circle, var(--color-border) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Chat bubble */
+.chat-bubble {
+  position: relative;
+}
+
+.chat-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 20px;
+  width: 12px;
+  height: 12px;
+  background: inherit;
+  transform: rotate(45deg);
+  border-radius: 2px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-text-muted);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-light);
+}
+
+/* Tag pill */
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.tag-pill:hover {
+  transform: scale(1.05);
+}
+
+/* Prose-like custom typography for essay sections */
+.prose-custom p {
+  color: var(--color-text-light);
+  line-height: 1.9;
+  margin-bottom: 1rem;
+  font-size: 0.9375rem;
+}
+
+.prose-custom p:last-child {
+  margin-bottom: 0;
+}
+
+.prose-custom strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.prose-custom em {
+  color: var(--color-coral);
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Inline keyword highlight — subtle on dark */
+.kw {
+  background: linear-gradient(to top, rgba(240, 180, 41, 0.25) 40%, transparent 40%);
+  padding: 0 2px;
+  font-weight: 600;
+  color: var(--color-text);
+}
