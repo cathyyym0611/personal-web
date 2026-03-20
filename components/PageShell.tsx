@@ -7,9 +7,11 @@ import { ArrowLeft } from "lucide-react";
 export default function PageShell({
   children,
   backLabel = "首页",
+  backHref = "/",
 }: {
   children: React.ReactNode;
   backLabel?: string;
+  backHref?: string;
 }) {
   return (
     <div className="pt-20 min-h-screen pb-16">
@@ -20,7 +22,7 @@ export default function PageShell({
           className="mb-6"
         >
           <Link
-            href="/"
+            href={backHref}
             className="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-coral transition-colors"
           >
             <ArrowLeft size={14} />

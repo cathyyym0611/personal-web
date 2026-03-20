@@ -32,57 +32,52 @@ export default function VibeCodingShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="card-playful p-6 group relative overflow-hidden"
             >
-              {/* Accent gradient top */}
-              <div
-                className="absolute top-0 left-0 right-0 h-1"
-                style={{
-                  background: `linear-gradient(90deg, ${project.color}, ${project.color}60)`,
-                }}
-              />
-              <div className="text-4xl mb-4">{project.emoji}</div>
-              <h3
-                className="text-lg font-bold mb-1"
-                style={{ color: project.color }}
+              <Link
+                href={`/projects/${project.slug}`}
+                className="card-playful p-6 group relative overflow-hidden block hover:-translate-y-1 transition-all duration-200"
               >
-                {project.title}
-              </h3>
-              <p className="text-xs text-text-muted mb-3">
-                {project.subtitle}
-              </p>
-              <p className="text-sm text-text-light leading-relaxed mb-4">
-                {project.description}
-              </p>
-              <div className="flex flex-wrap gap-1.5 mb-3">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="tag-pill text-xs"
-                    style={{
-                      backgroundColor: `${project.color}15`,
-                      color: project.color,
-                    }}
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              {project.link ? (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm font-semibold transition-colors"
+                {/* Accent gradient top */}
+                <div
+                  className="absolute top-0 left-0 right-0 h-1"
+                  style={{
+                    background: `linear-gradient(90deg, ${project.color}, ${project.color}60)`,
+                  }}
+                />
+                <div className="text-4xl mb-4">{project.emoji}</div>
+                <h3
+                  className="text-lg font-bold mb-1"
                   style={{ color: project.color }}
                 >
-                  去看看 →
-                </a>
-              ) : (
-                <span className="text-xs text-text-muted">
-                  🚧 即将上线
+                  {project.title}
+                </h3>
+                <p className="text-xs text-text-muted mb-3">
+                  {project.subtitle}
+                </p>
+                <p className="text-sm text-text-light leading-relaxed mb-4">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-1.5 mb-3">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="tag-pill text-xs"
+                      style={{
+                        backgroundColor: `${project.color}15`,
+                        color: project.color,
+                      }}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <span
+                  className="inline-flex items-center gap-1 text-sm font-semibold"
+                  style={{ color: project.color }}
+                >
+                  了解更多 →
                 </span>
-              )}
+              </Link>
             </motion.div>
           ))}
         </div>
