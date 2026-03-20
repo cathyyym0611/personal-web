@@ -82,10 +82,10 @@ export default function Research() {
                   <div className="mb-4 rounded-xl overflow-hidden border border-border bg-card">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src="/images/dp-poster.png"
+                      src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/dp-poster.png`}
                       alt="Privacy-Protected Linear Regression Research Poster"
                       className="w-full cursor-pointer hover:scale-[1.02] transition-transform"
-                      onClick={() => window.open("/images/dp-poster.png", "_blank")}
+                      onClick={() => window.open(`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/dp-poster.png`, "_blank")}
                     />
                     <p className="text-xs text-text-muted text-center py-2">
                       点击查看大图

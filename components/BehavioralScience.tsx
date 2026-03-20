@@ -140,7 +140,7 @@ export default function BehavioralScience() {
           <div className="my-8 rounded-2xl overflow-hidden border border-border bg-card p-4">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/com-b-model.jpg"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/com-b-model.jpg`}
               alt="COM-B Model: Capability, Opportunity, Motivation → Behavior"
               className="w-full max-w-lg mx-auto rounded-lg"
             />
