@@ -29,7 +29,7 @@ export default function ExploreGrid() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {visibleCards.map((card, i) => (
             <motion.div
               key={card.href}
@@ -37,10 +37,11 @@ export default function ExploreGrid() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
+              className="h-full"
             >
               <Link
                 href={card.href}
-                className="card-playful p-6 block group hover:-translate-y-1 transition-all duration-200"
+                className="card-playful p-6 block group h-full hover:-translate-y-1 transition-all duration-200"
               >
                 <span className="text-3xl mb-3 block group-hover:scale-110 transition-transform">
                   {card.emoji}
