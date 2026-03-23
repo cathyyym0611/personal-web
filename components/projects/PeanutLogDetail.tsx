@@ -26,7 +26,7 @@ export default function PeanutLogDetail() {
             <span className="text-5xl">🥜</span>
             <div>
               <h1 className="text-3xl md:text-4xl font-black" style={{ color: "#FFB347" }}>
-                花生记
+                见梨存档
               </h1>
               <p className="text-text-light text-lg">陈楚生粉丝的追星记忆库</p>
             </div>
@@ -53,7 +53,7 @@ export default function PeanutLogDetail() {
               追星的快乐很大一部分来自<strong>记录和回忆</strong>——你去了哪些演唱会、在哪个城市、听了哪些歌、和谁一起去的。但这些记忆散落在朋友圈、相册、聊天记录里，时间久了就模糊了。
             </p>
             <p>
-              花生记想做的事很简单：给每一次"在场"留一个清晰的印记。不是社交平台，不是打卡工具，而是一本属于你自己的<strong>追星记忆手账</strong>。
+              见梨存档想做的事很简单：给每一次"在场"留一个清晰的印记。不是社交平台，不是打卡工具，而是一本属于你自己的<strong>追星记忆手账</strong>。
             </p>
           </div>
         </Section>
@@ -101,7 +101,7 @@ export default function PeanutLogDetail() {
               粉丝群体的日常交流几乎都在微信里——群聊、朋友圈、公众号。小程序意味着<strong>零安装成本</strong>，在群里分享一个链接就能打开，和粉丝的使用场景天然贴合。
             </p>
             <p>
-              产品设计上，花生记追求的是"轻"——不需要每天打开，不推送、不打扰，只在你需要记录的时候出现。一场演唱会结束，打开记录一下，三分钟搞定。但当你某天想回看这些年的追星轨迹时，它都在。
+              产品设计上，见梨存档追求的是"轻"——不需要每天打开，不推送、不打扰，只在你需要记录的时候出现。一场演唱会结束，打开记录一下，三分钟搞定。但当你某天想回看这些年的追星轨迹时，它都在。
             </p>
           </div>
         </Section>

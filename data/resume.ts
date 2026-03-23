@@ -230,7 +230,7 @@ export const projects = [
     slug: "job-assistant",
   },
   {
-    title: "花生记",
+    title: "见梨存档",
     subtitle: "陈楚生粉丝的追星记忆库",
     description:
       "为粉丝设计的追星记录小程序：记录每一场演唱会和音乐节，自动统计听过的歌，追踪追星开销——让每一次相遇都有迹可循。",
