@@ -32,10 +32,11 @@ export default function VibeCodingShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
+              className="h-full"
             >
               <Link
                 href={`/projects/${project.slug}`}
-                className="card-playful p-6 group relative overflow-hidden block hover:-translate-y-1 transition-all duration-200"
+                className="card-playful p-6 group relative overflow-hidden block h-full flex flex-col hover:-translate-y-1 transition-all duration-200"
               >
                 {/* Accent gradient top */}
                 <div
@@ -57,26 +58,28 @@ export default function VibeCodingShowcase() {
                 <p className="text-sm text-text-light leading-relaxed mb-4">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-1.5 mb-3">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="tag-pill text-xs"
-                      style={{
-                        backgroundColor: `${project.color}15`,
-                        color: project.color,
-                      }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                <div className="mt-auto">
+                  <div className="flex flex-wrap gap-1.5 mb-3">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="tag-pill text-xs"
+                        style={{
+                          backgroundColor: `${project.color}15`,
+                          color: project.color,
+                        }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <span
+                    className="inline-flex items-center gap-1 text-sm font-semibold"
+                    style={{ color: project.color }}
+                  >
+                    了解更多 →
+                  </span>
                 </div>
-                <span
-                  className="inline-flex items-center gap-1 text-sm font-semibold"
-                  style={{ color: project.color }}
-                >
-                  了解更多 →
-                </span>
               </Link>
             </motion.div>
           ))}
