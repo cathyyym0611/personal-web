@@ -54,7 +54,7 @@ export default function Navbar() {
           href="/"
           className="text-[1.9rem] leading-none display-serif text-text hover-wiggle"
         >
-          盈豫
+          毛盈豫
         </Link>
 
         {/* Desktop nav */}

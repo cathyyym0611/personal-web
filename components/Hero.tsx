@@ -26,8 +26,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-6xl mx-auto">
         <div className="card-playful page-panel relative overflow-hidden rounded-[2rem] px-8 py-10 md:px-14 md:py-14">
           <div className="flex items-center justify-between mb-10">
-            <div className="display-serif text-3xl text-text">Yingyu Mao</div>
-            <div className="soft-button h-12 w-12 p-0 text-xl">☰</div>
+            <div className="display-serif text-3xl text-text">Cathy Mao</div>
           </div>
 
           <div className="text-center max-w-4xl mx-auto">
@@ -100,25 +99,23 @@ export default function Hero() {
               </p>
             </motion.div>
 
-            <motion.div
+            <motion.button
+              type="button"
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.25, duration: 0.7 }}
               className="order-1 md:order-2 flex justify-center"
+              onClick={() => setClicked(true)}
             >
-              <button
-                type="button"
-                onClick={() => setClicked(true)}
-                className="relative h-[320px] w-[250px] md:h-[420px] md:w-[320px] overflow-hidden rounded-[2rem] border border-[rgba(168,136,86,0.18)] bg-[linear-gradient(180deg,rgba(255,250,240,0.3)_0%,rgba(255,250,240,0.92)_68%,rgba(255,250,240,1)_100%)] shadow-[0_28px_70px_rgba(120,88,39,0.12)]"
-              >
+              <span className="relative h-[320px] w-[250px] md:h-[420px] md:w-[320px] overflow-hidden rounded-[2rem] border border-[rgba(168,136,86,0.18)] bg-[linear-gradient(180deg,rgba(255,250,240,0.3)_0%,rgba(255,250,240,0.92)_68%,rgba(255,250,240,1)_100%)] shadow-[0_28px_70px_rgba(120,88,39,0.12)]">
                 <img
                   src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/yy-profile.jpg`}
                   alt="Yingyu portrait"
                   className="h-full w-full object-cover object-center"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#fff8ed] to-transparent" />
-              </button>
-            </motion.div>
+              </span>
+            </motion.button>
 
             <motion.div
               initial={{ opacity: 0, y: 18 }}

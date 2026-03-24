@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { personalInfo, funFacts, education } from "@/data/resume";
+import { funFacts, education } from "@/data/resume";
 import { useState } from "react";
 
 export default function About() {
@@ -37,7 +37,13 @@ export default function About() {
           {/* Summary */}
           <div>
             <p className="text-text-light leading-relaxed text-base mb-4">
-              {personalInfo.summary}
+              我是毛盈豫，宁波人，本科在密歇根大学读经济和统计，现在在宾夕法尼亚大学读行为与决策科学。相比“我做过什么”，我更在意的是“我为什么会对这些事着迷”。
+            </p>
+            <p className="text-text-light leading-relaxed text-base mb-4">
+              我一直特别想搞明白一件事：<strong>人为什么明明知道更好的选择，却还是不会那样做？</strong> 这也是我后来会同时被行为科学、用户研究和 AI 吸引的原因。它们看起来分属不同领域，但本质上都在回答同一个问题：怎么更好地理解人，然后设计出更自然、更有效的体验。
+            </p>
+            <p className="text-text-light leading-relaxed text-base mb-4">
+              工作里，我喜欢把模糊的问题拆成清晰结构；生活里，我又是那种会因为一个念头就立刻开做的人。所以你会看到我一边研究 AI trust，一边做 vibe coding、小产品、旅行记录，也一直在试着把“好奇心”变成真正落地的东西。
             </p>
             <div className="flex flex-wrap gap-2">
               {education.map((edu) => (
@@ -46,6 +52,13 @@ export default function About() {
                   className="tag-pill bg-lavender/10 text-lavender text-xs"
                 >
                   {edu.emoji} {edu.school} · {edu.degree}
+                </span>
+              ))}
+            </div>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {["宁波长大", "费城读研", "喜欢把想法快速做出来", "对人和 AI 的关系很好奇"].map((item) => (
+                <span key={item} className="tag-pill text-xs text-text-light">
+                  {item}
                 </span>
               ))}
             </div>
