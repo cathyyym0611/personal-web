@@ -19,8 +19,12 @@ export default function About() {
         >
           {/* Photo placeholder */}
           <div className="flex-shrink-0">
-            <div className="w-44 h-44 rounded-3xl bg-gradient-to-br from-coral/20 via-lavender/20 to-mint/20 flex items-center justify-center border border-border">
-              <span className="text-5xl font-black gradient-text">YY</span>
+            <div className="w-44 h-44 rounded-3xl overflow-hidden border border-border bg-card">
+              <img
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/yy-profile.jpg`}
+                alt="Yingyu portrait"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
           {/* Summary */}
