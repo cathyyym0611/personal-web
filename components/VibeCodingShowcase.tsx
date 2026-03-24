@@ -5,23 +5,21 @@ import Link from "next/link";
 
 const showcaseCards = [
   {
-    title: "Vibe Coding",
-    subtitle: "把想法快速做成能用的产品",
-    description:
-      "做了词忆、AI求职助手、见梨存档 3 个小产品：从语言学习、求职陪伴到粉丝记忆库，都是从真实需求出发，快速验证、边做边迭代。",
-    tags: ["AI 产品", "快速原型", "用户需求"],
-    emoji: "⚡",
-    color: "#F0B429",
-    href: "/projects",
-    cta: "查看项目",
-  },
-  {
     title: "Michigan Venture Club",
     subtitle: "为早期团队做用户与增长咨询",
-    bullets: [
-      "Cosmable：围绕点评与留存设计增长策略，推动核心互动指标提升。",
-      "Sonia Health：从 0 到 1 搭建校园大使项目，验证早期用户获取路径。",
-      "Ambient Intelligence：梳理目标用户与使用场景，帮助团队聚焦产品切入点。",
+    items: [
+      {
+        label: "Cosmable",
+        text: "围绕点评与留存设计增长策略，推动核心互动指标提升。",
+      },
+      {
+        label: "Sonia Health",
+        text: "从 0 到 1 搭建校园大使项目，验证早期用户获取路径。",
+      },
+      {
+        label: "Ambient Intelligence",
+        text: "梳理目标用户与使用场景，帮助团队聚焦产品切入点。",
+      },
     ],
     tags: ["Consulting", "增长策略", "0-1 验证"],
     emoji: "🚀",
@@ -30,10 +28,33 @@ const showcaseCards = [
     cta: "看更多经历",
   },
   {
+    title: "Vibe Coding",
+    subtitle: "把想法快速做成能用的产品",
+    items: [
+      {
+        label: "词忆 VocabStory",
+        text: "把背单词变成有上下文的故事记忆，让语言学习更自然、更有画面感。",
+      },
+      {
+        label: "AI求职助手",
+        text: "把简历分析、JD 匹配、求职信和面试准备串成一条更省力的求职流程。",
+      },
+      {
+        label: "见梨存档",
+        text: "为粉丝做追星记忆库，记录线下活动、歌曲足迹和追星开销。",
+      },
+    ],
+    tags: ["AI 产品", "快速原型", "用户需求"],
+    emoji: "⚡",
+    color: "#F0B429",
+    href: "/projects",
+    cta: "查看项目",
+  },
+  {
     title: "ComplexChaos",
     subtitle: "用行为科学优化 AI 问卷体验",
     description:
-      "宾大 Capstone 项目，研究如何降低 AI 问卷流失率、提升表达意愿，并把用户输入整理成结构化洞察与策略建议。",
+      "宾大 Capstone 项目，想解决的是传统问卷又长又干、用户说到一半就退出的问题。我们把 survey 做得更像一段被理解的对话：用进度反馈、问题编排和 alignment repair 降低流失率，也让 AI 自动把零散回答整理成结构化洞察与策略建议，让研究者更快看到真正有用的用户信号。",
     tags: ["行为科学", "AI", "Capstone"],
     emoji: "🧪",
     color: "#4ECDC4",
@@ -97,12 +118,18 @@ export default function VibeCodingShowcase() {
                   </p>
                 ) : (
                   <div className="space-y-3 mb-4">
-                    {card.bullets.map((bullet) => (
+                    {card.items.map((item) => (
                       <p
-                        key={bullet}
+                        key={item.label}
                         className="text-sm text-text-light leading-relaxed"
                       >
-                        {bullet}
+                        <span
+                          className="font-semibold"
+                          style={{ color: card.color }}
+                        >
+                          {item.label}
+                        </span>
+                        ：{item.text}
                       </p>
                     ))}
                   </div>
