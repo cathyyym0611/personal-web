@@ -21,7 +21,8 @@ export default function VocabStoryDetail() {
     <section className="py-12 px-6">
       <div className="max-w-3xl mx-auto">
         {/* Header */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-12">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-12 card-playful p-8">
+          <p className="section-eyebrow mb-3">Vibe coding project</p>
           <div className="flex items-center gap-4 mb-4">
             <span className="text-5xl">🎵</span>
             <div>
@@ -43,8 +44,7 @@ export default function VocabStoryDetail() {
               href="https://vocabstory.cc/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:-translate-y-0.5"
-              style={{ backgroundColor: "#FF6B6B", color: "#0f0f1a" }}
+              className="soft-button soft-button-primary text-sm font-semibold"
             >
               访问词忆 →
             </a>

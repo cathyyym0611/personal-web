@@ -1,30 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  /* Dark flat design palette */
-  --color-coral: #f0b429;
-  --color-coral-light: #f7c948;
-  --color-mint: #38b2ac;
-  --color-mint-light: #4fd1c5;
-  --color-sunny: #f0b429;
-  --color-sunny-dark: #d69e2e;
-  --color-lavender: #a78bfa;
-  --color-lavender-light: #c4b5fd;
-  --color-sky: #63b3ed;
-  --color-peach: #f6ad55;
-  --color-orange: #ed8936;
+  --color-coral: #d59b28;
+  --color-coral-light: #e8b64d;
+  --color-mint: #c8842b;
+  --color-mint-light: #e0ab58;
+  --color-sunny: #efd77d;
+  --color-sunny-dark: #c48a20;
+  --color-lavender: #b9863f;
+  --color-lavender-light: #dcc28d;
+  --color-sky: #d9a441;
+  --color-peach: #f2c78d;
+  --color-orange: #be6e23;
 
-  /* Dark neutrals */
-  --color-cream: #0f0f1a;
-  --color-warm-white: #1a1a2e;
-  --color-card: #1e1e32;
-  --color-card-hover: #25253d;
-  --color-text: #f0f0f0;
-  --color-text-light: #b0b0c0;
-  --color-text-muted: #6b6b80;
-  --color-border: #2a2a40;
+  --color-cream: #f7f1e7;
+  --color-warm-white: #fffdf8;
+  --color-card: rgba(255, 251, 245, 0.72);
+  --color-card-hover: rgba(255, 252, 247, 0.9);
+  --color-text: #1d160f;
+  --color-text-light: #4f4336;
+  --color-text-muted: #8a7863;
+  --color-border: rgba(168, 136, 86, 0.18);
 
-  --font-sans: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+  --font-sans: "Manrope", "Noto Sans SC", system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", "Noto Serif SC", serif;
 }
 
 html {
@@ -34,43 +33,129 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--color-text);
-  background-color: var(--color-cream);
+  background:
+    radial-gradient(circle at top left, rgba(244, 217, 139, 0.5), transparent 32%),
+    radial-gradient(circle at top right, rgba(235, 188, 104, 0.26), transparent 24%),
+    radial-gradient(circle at 50% 20%, rgba(251, 244, 206, 0.92), transparent 28%),
+    linear-gradient(180deg, #f2eee7 0%, #f8f3eb 35%, #f7f1e8 100%);
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(164, 133, 85, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(164, 133, 85, 0.04) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.45), transparent 75%);
+  z-index: -1;
 }
 
 ::selection {
-  background-color: var(--color-coral);
-  color: var(--color-cream);
+  background-color: rgba(228, 182, 77, 0.38);
+  color: var(--color-text);
 }
 
-/* Gradient text — gold to teal */
 .gradient-text {
-  background: linear-gradient(135deg, var(--color-coral), var(--color-mint));
+  background: linear-gradient(135deg, #b76f1c 0%, #dda63d 45%, #8f5b13 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-mint {
-  background: linear-gradient(135deg, var(--color-mint), var(--color-sky));
+  background: linear-gradient(135deg, #c8842b 0%, #e0ab58 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Flat card */
 .card-playful {
-  background: var(--color-card);
-  border-radius: 1rem;
+  background: linear-gradient(180deg, rgba(255, 252, 246, 0.88) 0%, rgba(255, 249, 239, 0.74) 100%);
+  backdrop-filter: blur(20px);
+  border-radius: 1.6rem;
   border: 1px solid var(--color-border);
-  transition: all 0.3s ease;
+  box-shadow:
+    0 22px 60px rgba(120, 88, 39, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .card-playful:hover {
-  border-color: var(--color-coral);
-  transform: translateY(-2px);
+  border-color: rgba(213, 155, 40, 0.34);
+  background: linear-gradient(180deg, rgba(255, 252, 247, 0.94) 0%, rgba(255, 249, 241, 0.84) 100%);
+  box-shadow:
+    0 28px 72px rgba(120, 88, 39, 0.12),
+    0 0 0 1px rgba(224, 171, 88, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72);
+  transform: translateY(-4px);
 }
 
-/* Bounce in animation */
+.page-panel {
+  position: relative;
+}
+
+.page-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at top center, rgba(249, 224, 136, 0.3), transparent 45%);
+  pointer-events: none;
+}
+
+.section-eyebrow {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--color-sunny-dark);
+  letter-spacing: 0.02em;
+}
+
+.section-title {
+  font-family: var(--font-sans);
+  letter-spacing: -0.04em;
+}
+
+.display-serif {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.soft-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.4rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(168, 136, 86, 0.18);
+  background: rgba(255, 251, 244, 0.76);
+  color: var(--color-text);
+  box-shadow: 0 14px 34px rgba(120, 88, 39, 0.08);
+  transition: all 0.25s ease;
+}
+
+.soft-button:hover {
+  transform: translateY(-2px);
+  border-color: rgba(213, 155, 40, 0.32);
+  box-shadow: 0 18px 40px rgba(120, 88, 39, 0.12);
+}
+
+.soft-button-primary {
+  background: linear-gradient(135deg, #1d160f 0%, #342618 100%);
+  color: #fff8ec;
+  border-color: rgba(29, 22, 15, 0.2);
+}
+
+.soft-button-primary:hover {
+  background: linear-gradient(135deg, #261b11 0%, #43301d 100%);
+}
+
 @keyframes bounceIn {
   0% { transform: scale(0); opacity: 0; }
   50% { transform: scale(1.1); }
@@ -81,7 +166,6 @@ body {
   animation: bounceIn 0.5s ease-out forwards;
 }
 
-/* Wiggle animation */
 @keyframes wiggle {
   0%, 100% { transform: rotate(0deg); }
   25% { transform: rotate(-5deg); }
@@ -92,10 +176,9 @@ body {
   animation: wiggle 0.4s ease-in-out;
 }
 
-/* Emoji pulse */
 @keyframes emojiPulse {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
+  50% { transform: scale(1.12); }
 }
 
 .emoji-pulse:hover {
@@ -103,19 +186,17 @@ body {
   cursor: pointer;
 }
 
-/* Section background patterns */
 .bg-dots {
-  background-image: radial-gradient(circle, var(--color-border) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(168, 136, 86, 0.12) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
-/* Chat bubble */
 .chat-bubble {
   position: relative;
 }
 
 .chat-bubble::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -6px;
   left: 20px;
@@ -126,7 +207,6 @@ body {
   border-radius: 2px;
 }
 
-/* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -136,36 +216,36 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-text-muted);
+  background: rgba(168, 136, 86, 0.5);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-text-light);
+  background: rgba(168, 136, 86, 0.76);
 }
 
-/* Tag pill */
 .tag-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  padding: 0.25rem 0.75rem;
+  padding: 0.35rem 0.82rem;
   border-radius: 9999px;
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 600;
+  border: 1px solid rgba(168, 136, 86, 0.16);
+  background: rgba(255, 250, 241, 0.85);
   transition: all 0.2s;
 }
 
 .tag-pill:hover {
-  transform: scale(1.05);
+  transform: translateY(-1px);
 }
 
-/* Prose-like custom typography for essay sections */
 .prose-custom p {
   color: var(--color-text-light);
   line-height: 1.9;
   margin-bottom: 1rem;
-  font-size: 0.9375rem;
+  font-size: 0.97rem;
 }
 
 .prose-custom p:last-child {
@@ -174,18 +254,17 @@ body {
 
 .prose-custom strong {
   color: var(--color-text);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .prose-custom em {
-  color: var(--color-coral);
+  color: var(--color-sunny-dark);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-/* Inline keyword highlight — subtle on dark */
 .kw {
-  background: linear-gradient(to top, rgba(240, 180, 41, 0.25) 40%, transparent 40%);
+  background: linear-gradient(to top, rgba(238, 205, 113, 0.45) 45%, transparent 45%);
   padding: 0 2px;
   font-weight: 600;
   color: var(--color-text);

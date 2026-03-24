@@ -66,7 +66,8 @@ export default function BehavioralScience() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-16"
         >
-          <h1 className="text-3xl md:text-4xl font-black mb-4">
+          <p className="section-eyebrow mb-2">Behavioral science</p>
+          <h1 className="section-title text-3xl md:text-5xl font-semibold mb-4">
             🧠 行为科学是什么？
           </h1>
           <p className="text-text-light text-lg">
@@ -137,7 +138,7 @@ export default function BehavioralScience() {
           </div>
 
           {/* COM-B Framework diagram */}
-          <div className="my-8 rounded-2xl overflow-hidden border border-border bg-card p-4">
+          <div className="my-8 rounded-[1.5rem] overflow-hidden border border-border bg-card p-4">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/com-b-model.jpg`}
@@ -150,13 +151,13 @@ export default function BehavioralScience() {
           </div>
 
           <div className="flex flex-wrap gap-2 mt-6">
-            <span className="tag-pill bg-mint/10 text-mint text-xs">
+            <span className="tag-pill bg-sunny/20 text-sunny-dark text-xs">
               COM-B Model
             </span>
-            <span className="tag-pill bg-mint/10 text-mint text-xs">
+            <span className="tag-pill bg-sunny/20 text-sunny-dark text-xs">
               EAST Framework
             </span>
-            <span className="tag-pill bg-mint/10 text-mint text-xs">
+            <span className="tag-pill bg-sunny/20 text-sunny-dark text-xs">
               Friction / Sludge
             </span>
           </div>
@@ -187,13 +188,13 @@ export default function BehavioralScience() {
             </p>
           </div>
           <div className="flex flex-wrap gap-2 mt-6">
-            <span className="tag-pill bg-coral/10 text-coral text-xs">
+            <span className="tag-pill bg-peach/30 text-orange text-xs">
               AI Trust
             </span>
-            <span className="tag-pill bg-coral/10 text-coral text-xs">
+            <span className="tag-pill bg-peach/30 text-orange text-xs">
               Disclosure × Framing
             </span>
-            <span className="tag-pill bg-coral/10 text-coral text-xs">
+            <span className="tag-pill bg-peach/30 text-orange text-xs">
               Human-AI Interaction
             </span>
           </div>

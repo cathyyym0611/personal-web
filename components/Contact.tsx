@@ -25,7 +25,8 @@ export default function Contact() {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-black mb-3">
+          <p className="section-eyebrow mb-2">Get in touch</p>
+          <h2 className="section-title text-3xl md:text-5xl font-semibold mb-3">
             💌 和我聊聊
           </h2>
           <p className="text-text-light max-w-lg mx-auto">
@@ -94,8 +95,8 @@ export default function Contact() {
             <p
               className={`text-xs mt-2 font-medium transition-all ${
                 copied
-                  ? "text-mint opacity-100"
-                  : "text-coral opacity-0 group-hover:opacity-100"
+                  ? "text-sunny-dark opacity-100"
+                  : "text-orange opacity-0 group-hover:opacity-100"
               }`}
             >
               {copied ? "✅ 已复制" : "点击复制微信号"}
@@ -120,7 +121,7 @@ export default function Contact() {
       <div className="mt-20 text-center">
         <a
           href="#"
-          className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-coral transition-colors mb-4"
+          className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-sunny-dark transition-colors mb-4"
         >
           <ArrowUp size={14} />
           回到顶部

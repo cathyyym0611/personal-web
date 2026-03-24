@@ -73,8 +73,9 @@ export default function VibeCodingShowcase() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-2xl md:text-3xl font-black mb-2">
-            ⚡ 项目精选
+          <p className="section-eyebrow mb-2">Selected projects</p>
+          <h2 className="section-title text-3xl md:text-5xl font-semibold mb-2">
+            项目精选
           </h2>
           <p className="text-text-muted text-sm">
             从快速产品实验到咨询与研究，我在不同场景里持续把想法落地
@@ -165,7 +166,7 @@ export default function VibeCodingShowcase() {
         <div className="text-center mt-8">
           <Link
             href="/projects"
-            className="text-sm font-semibold text-coral hover:text-coral-light transition-colors"
+            className="text-sm font-semibold text-sunny-dark hover:text-orange transition-colors"
           >
             查看所有项目 →
           </Link>

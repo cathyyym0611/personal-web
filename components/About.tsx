@@ -10,12 +10,19 @@ export default function About() {
   return (
     <section id="about" className="py-20 px-6">
       <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <p className="section-eyebrow mb-2">A short introduction</p>
+          <h2 className="section-title text-3xl md:text-5xl font-semibold">
+            More about me
+          </h2>
+        </div>
+
         {/* Intro */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row items-center gap-10 mb-16"
+          className="card-playful p-8 flex flex-col md:flex-row items-center gap-10 mb-16"
         >
           {/* Photo placeholder */}
           <div className="flex-shrink-0">

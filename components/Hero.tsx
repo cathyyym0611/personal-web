@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 import { personalInfo } from "@/data/resume";
 import { useEffect, useState } from "react";
 
-/* ───────── Hero Component — Dark Flat Design ───────── */
-
 export default function Hero() {
   const [currentKeyword, setCurrentKeyword] = useState(0);
   const [clicked, setClicked] = useState(false);
@@ -18,115 +16,149 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="hero-section relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-      {/* Deep gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a18] via-[#0f0f1a] to-[#1a1a2e]" />
+    <section className="relative min-h-screen overflow-hidden px-6 pt-28 pb-16">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute left-1/2 top-20 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(243,223,128,0.68)_0%,rgba(243,223,128,0.2)_34%,transparent_72%)] blur-3xl" />
+        <div className="absolute left-8 top-28 h-44 w-44 rounded-full bg-[radial-gradient(circle,rgba(235,190,110,0.34)_0%,transparent_74%)] blur-2xl" />
+        <div className="absolute bottom-10 right-10 h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(220,176,92,0.2)_0%,transparent_76%)] blur-2xl" />
+      </div>
 
-      {/* Ambient glow orbs */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(240,180,41,0.06)_0%,transparent_70%)] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(56,178,172,0.05)_0%,transparent_70%)] pointer-events-none" />
+      <div className="relative z-10 max-w-6xl mx-auto">
+        <div className="card-playful page-panel relative overflow-hidden rounded-[2rem] px-8 py-10 md:px-14 md:py-14">
+          <div className="flex items-center justify-between mb-10">
+            <div className="display-serif text-3xl text-text">Yingyu Mao</div>
+            <div className="soft-button h-12 w-12 p-0 text-xl">☰</div>
+          </div>
 
-      {/* Subtle grid pattern */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
-        backgroundImage: 'linear-gradient(rgba(240,180,41,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(240,180,41,0.3) 1px, transparent 1px)',
-        backgroundSize: '60px 60px'
-      }} />
-
-      {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, type: "spring" }}
-        >
-          <motion.p
-            className="text-5xl md:text-7xl mb-6 cursor-pointer select-none"
-            whileTap={{ scale: 1.3, rotate: [0, -10, 10, 0] }}
-            onClick={() => setClicked(true)}
-          >
-            👋
-          </motion.p>
-
-          {clicked && (
+          <div className="text-center max-w-4xl mx-auto">
             <motion.p
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="text-sm text-coral mb-2 font-medium"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="section-eyebrow mb-4"
             >
-              你发现了一个彩蛋！🎉
+              AI × Behavioral Science × Product Thinking
             </motion.p>
-          )}
 
-          <h1 className="text-4xl md:text-6xl font-black mb-4 leading-tight tracking-tight">
-            Hey, 我是
-            <span className="gradient-text"> 盈豫</span>
-          </h1>
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75 }}
+            >
+              <p className="text-4xl md:text-7xl font-semibold tracking-[-0.06em] mb-2">
+                Hi I&apos;m <span className="gradient-text">盈豫</span>
+              </p>
+              <h1 className="display-serif text-[4rem] leading-none md:text-[7.2rem] mb-6 text-text">
+                Curious Builder
+              </h1>
+            </motion.div>
 
-          <p className="text-lg md:text-xl text-text-light mb-2 leading-relaxed">
-            {personalInfo.tagline}
-          </p>
-          <p className="text-sm text-text-muted mb-8">
-            {personalInfo.subtitle}
-          </p>
-        </motion.div>
+            <motion.p
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.7 }}
+              className="max-w-3xl mx-auto text-lg md:text-2xl text-text-light leading-relaxed"
+            >
+              我把 <span className="text-text font-semibold">清晰策略</span>、
+              <span className="text-text font-semibold"> thoughtful design</span> 和
+              <span className="text-text font-semibold"> user empathy</span> 放在一起，
+              去做真正有人会想用、也真的能解决问题的东西。
+            </motion.p>
 
-        {/* Rotating keywords */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.35 }}
+              className="mt-6 h-9 flex items-center justify-center text-sm md:text-base"
+            >
+              <span className="text-text-muted mr-2">目前关键词</span>
+              <motion.span
+                key={currentKeyword}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35 }}
+                className="font-semibold text-sunny-dark"
+              >
+                {personalInfo.keywords[currentKeyword]}
+              </motion.span>
+            </motion.div>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-[1fr_auto_1fr] md:items-end">
+            <motion.div
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="order-2 md:order-1"
+            >
+              <div className="soft-button w-fit bg-[rgba(255,253,247,0.92)]">
+                <span className="inline-flex h-2.5 w-2.5 rounded-full bg-sunny-dark" />
+                Available for new opportunities
+              </div>
+              <p className="mt-5 max-w-xs text-sm leading-relaxed text-text-light">
+                宾大行为科学硕士，持续在 AI、用户理解、产品落地和真实世界问题之间来回穿梭。
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.25, duration: 0.7 }}
+              className="order-1 md:order-2 flex justify-center"
+            >
+              <button
+                type="button"
+                onClick={() => setClicked(true)}
+                className="relative h-[320px] w-[250px] md:h-[420px] md:w-[320px] overflow-hidden rounded-[2rem] border border-[rgba(168,136,86,0.18)] bg-[linear-gradient(180deg,rgba(255,250,240,0.3)_0%,rgba(255,250,240,0.92)_68%,rgba(255,250,240,1)_100%)] shadow-[0_28px_70px_rgba(120,88,39,0.12)]"
+              >
+                <img
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/yy-profile.jpg`}
+                  alt="Yingyu portrait"
+                  className="h-full w-full object-cover object-center grayscale"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#fff8ed] to-transparent" />
+              </button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="order-3 flex flex-col items-start md:items-end"
+            >
+              <p className="max-w-sm text-sm md:text-base leading-relaxed text-text-light md:text-right">
+                passionate about turning ambiguity into structure, and making AI products feel warm, useful, and human.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3 md:justify-end">
+                <a href="#about" className="soft-button soft-button-primary">
+                  认识我 →
+                </a>
+                <a href="#contact" className="soft-button">
+                  聊聊
+                </a>
+              </div>
+              {clicked && (
+                <p className="mt-4 text-sm font-medium text-sunny-dark">
+                  小彩蛋已触发，欢迎继续往下逛。
+                </p>
+              )}
+            </motion.div>
+          </div>
+        </div>
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="h-10 mb-10 flex items-center justify-center"
+          transition={{ delay: 0.9 }}
+          className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-text-muted"
         >
-          <span className="text-text-muted mr-2">#</span>
-          <motion.span
-            key={currentKeyword}
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            transition={{ duration: 0.4 }}
-            className="text-coral font-bold text-lg"
-          >
-            {personalInfo.keywords[currentKeyword]}
-          </motion.span>
-        </motion.div>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          className="flex gap-4 justify-center flex-wrap mb-24"
-        >
-          <a
-            href="#about"
-            className="px-8 py-3 bg-coral text-[#0f0f1a] rounded-full font-semibold hover:bg-coral-light transition-all hover:-translate-y-0.5"
-          >
-            了解我 →
-          </a>
-          <a
-            href="#contact"
-            className="px-8 py-3 border border-coral/30 text-coral rounded-full font-semibold hover:bg-coral/10 transition-all"
-          >
-            💌 聊聊
-          </a>
+          <span>Behavioral Science</span>
+          <span>AI Product</span>
+          <span>User Research</span>
+          <span>Strategy</span>
+          <span>Vibe Coding</span>
         </motion.div>
       </div>
-
-      {/* Scroll hint */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="text-text-muted text-sm"
-        >
-          ↓ 往下看看
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

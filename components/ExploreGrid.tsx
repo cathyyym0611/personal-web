@@ -21,7 +21,8 @@ export default function ExploreGrid() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-2xl md:text-3xl font-black mb-2">
+          <p className="section-eyebrow mb-2">Explore more</p>
+          <h2 className="section-title text-3xl md:text-5xl font-semibold mb-2">
             想了解更多？
           </h2>
           <p className="text-text-muted text-sm">

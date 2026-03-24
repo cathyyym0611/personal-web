@@ -32,7 +32,7 @@ function MagazineRegion({
       {/* Region label */}
       <div className="flex items-center gap-3 mb-6">
         <span className="text-2xl">{region.emoji}</span>
-        <h3 className="text-xl font-bold">{region.region}</h3>
+        <h3 className="text-xl font-bold text-text">{region.region}</h3>
         <div className="flex-1 h-px bg-border" />
       </div>
 
@@ -49,8 +49,8 @@ function MagazineRegion({
           }`}
         >
           <div
-            className="relative rounded-2xl overflow-hidden group cursor-pointer h-full min-h-[280px] md:min-h-[360px]"
-            style={{ backgroundColor: `${feature.color}18` }}
+            className="card-playful page-panel relative overflow-hidden group cursor-pointer h-full min-h-[280px] md:min-h-[360px]"
+            style={{ backgroundColor: `${feature.color}12` }}
           >
             {/* Placeholder photo area */}
             <div className="absolute inset-0 flex items-center justify-center">
@@ -64,16 +64,16 @@ function MagazineRegion({
               }}
             />
             {/* Caption */}
-            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/40 to-transparent">
-              <h4 className="text-white text-xl font-bold drop-shadow-lg">
+            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-[rgba(255,248,236,0.96)] to-transparent">
+              <h4 className="text-text text-xl font-bold">
                 {feature.name}
               </h4>
-              <p className="text-white/80 text-sm drop-shadow">
+              <p className="text-text-light text-sm">
                 {feature.tag}
               </p>
             </div>
             {/* Hover effect */}
-            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
+            <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors" />
           </div>
         </div>
 
@@ -81,8 +81,8 @@ function MagazineRegion({
         {rest.map((place, i) => (
           <div key={place.name}>
             <div
-              className="relative rounded-2xl overflow-hidden group cursor-pointer h-full min-h-[170px]"
-              style={{ backgroundColor: `${place.color}18` }}
+              className="card-playful page-panel relative overflow-hidden group cursor-pointer h-full min-h-[170px]"
+              style={{ backgroundColor: `${place.color}12` }}
             >
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="text-3xl opacity-20">📷</span>
@@ -95,15 +95,15 @@ function MagazineRegion({
                   }deg, ${place.color}30, transparent 60%)`,
                 }}
               />
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/40 to-transparent">
-                <h4 className="text-white text-base font-bold drop-shadow-lg">
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[rgba(255,248,236,0.96)] to-transparent">
+                <h4 className="text-text text-base font-bold">
                   {place.name}
                 </h4>
-                <p className="text-white/80 text-xs drop-shadow">
+                <p className="text-text-light text-xs">
                   {place.tag}
                 </p>
               </div>
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
+              <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors" />
             </div>
           </div>
         ))}
@@ -121,7 +121,8 @@ export default function Travel() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-16"
         >
-          <h1 className="text-3xl md:text-4xl font-black mb-3">
+          <p className="section-eyebrow mb-2">On the road</p>
+          <h1 className="section-title text-3xl md:text-5xl font-semibold mb-3">
             ✈️ 我去过哪里
           </h1>
           <p className="text-text-light">用脚步丈量世界，用照片留住记忆</p>

@@ -21,7 +21,8 @@ export default function PeanutLogDetail() {
     <section className="py-12 px-6">
       <div className="max-w-3xl mx-auto">
         {/* Header */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-12">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-12 card-playful p-8">
+          <p className="section-eyebrow mb-3">Vibe coding project</p>
           <div className="flex items-center gap-4 mb-4">
             <span className="text-5xl">🥜</span>
             <div>

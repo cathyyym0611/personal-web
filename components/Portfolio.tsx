@@ -13,7 +13,8 @@ export default function Portfolio() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-16"
         >
-          <h1 className="text-3xl md:text-4xl font-black mb-3">🎨 作品集</h1>
+          <p className="section-eyebrow mb-2">Visual work</p>
+          <h1 className="section-title text-3xl md:text-5xl font-semibold mb-3">🎨 作品集</h1>
           <p className="text-text-light">
             Slide 设计、海报、活动物料——工作和社团中的视觉产出
           </p>
@@ -42,7 +43,7 @@ export default function Portfolio() {
                   上传作品后显示
                 </span>
                 {/* Hover overlay */}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
+                <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors" />
               </div>
 
               {/* Info */}

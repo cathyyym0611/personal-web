@@ -14,7 +14,8 @@ export default function Projects() {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-black mb-3">
+          <p className="section-eyebrow mb-2">Everything I am building</p>
+          <h2 className="section-title text-3xl md:text-5xl font-semibold mb-3">
             💡 我在折腾什么
           </h2>
           <p className="text-text-light">
@@ -50,7 +51,7 @@ export default function Projects() {
                     <div className="flex items-start justify-between">
                       <span className="text-3xl">{project.emoji}</span>
                       {project.isVibe && (
-                        <span className="tag-pill bg-coral/10 text-coral text-xs font-bold">
+                        <span className="tag-pill bg-sunny/20 text-sunny-dark text-xs font-bold">
                           ⚡ Vibe Coding
                         </span>
                       )}
@@ -70,7 +71,7 @@ export default function Projects() {
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="tag-pill bg-cream text-text-light text-xs"
+                          className="tag-pill text-text-light text-xs"
                         >
                           {tag}
                         </span>

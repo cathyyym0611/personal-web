@@ -13,7 +13,8 @@ export default function Experience() {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-black mb-3">
+          <p className="section-eyebrow mb-2">Path so far</p>
+          <h2 className="section-title text-3xl md:text-5xl font-semibold mb-3">
             🚀 我在做什么
           </h2>
           <p className="text-text-light">在 AI 与互联网的世界里摸爬滚打</p>
@@ -63,7 +64,7 @@ export default function Experience() {
               <div className="space-y-2 mb-4">
                 {exp.highlights.map((h, i) => (
                   <div key={i} className="flex items-start gap-2 text-sm">
-                    <span className="text-coral mt-0.5">✦</span>
+                    <span className="text-sunny-dark mt-0.5">✦</span>
                     <span className="text-text">{h}</span>
                   </div>
                 ))}
@@ -100,7 +101,7 @@ export default function Experience() {
             {otherExperiences.map((exp) => (
               <span
                 key={exp.company}
-                className="tag-pill bg-card border border-border text-text-light hover:border-coral/30"
+                className="tag-pill bg-[rgba(255,251,244,0.75)] border border-border text-text-light hover:border-sunny/50"
               >
                 {exp.emoji} {exp.company} · {exp.role}
                 <span className="text-text-muted ml-1 text-xs">

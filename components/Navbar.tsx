@@ -45,16 +45,16 @@ export default function Navbar() {
       transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || pathname !== "/"
-          ? "bg-[#0f0f1a]/90 backdrop-blur-lg border-b border-border"
+          ? "bg-[rgba(255,251,244,0.78)] backdrop-blur-xl border-b border-border shadow-[0_10px_30px_rgba(120,88,39,0.06)]"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link
           href="/"
-          className="text-xl font-black gradient-text hover-wiggle"
+          className="text-[1.9rem] leading-none display-serif text-text hover-wiggle"
         >
-          盈豫 ✨
+          盈豫
         </Link>
 
         {/* Desktop nav */}
@@ -67,8 +67,8 @@ export default function Navbar() {
                 href={item.href}
                 className={`text-sm font-medium transition-colors group ${
                   isActive
-                    ? "text-coral"
-                    : "text-text-light hover:text-coral"
+                    ? "text-sunny-dark"
+                    : "text-text-light hover:text-sunny-dark"
                 }`}
               >
                 <span className="group-hover:hidden">{item.label}</span>
@@ -82,7 +82,7 @@ export default function Navbar() {
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden p-2 hover:bg-coral/10 rounded-xl transition-colors"
+          className="md:hidden p-2 hover:bg-sunny/30 rounded-full border border-border bg-[rgba(255,251,244,0.72)] transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -97,7 +97,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#0f0f1a]/95 backdrop-blur-lg border-t border-border"
+            className="md:hidden bg-[rgba(255,251,244,0.92)] backdrop-blur-xl border-t border-border"
           >
             <div className="px-6 py-4 flex flex-col gap-3">
               {visibleItems.map((item) => {
@@ -107,7 +107,7 @@ export default function Navbar() {
                     key={item.href}
                     href={item.href}
                     className={`text-sm font-medium transition-colors py-1 ${
-                      isActive ? "text-coral" : "text-text-light hover:text-coral"
+                      isActive ? "text-sunny-dark" : "text-text-light hover:text-sunny-dark"
                     }`}
                   >
                     {item.emoji} {item.label}

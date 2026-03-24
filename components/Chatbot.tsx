@@ -83,7 +83,7 @@ export default function Chatbot() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => setOpen(true)}
-            className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-coral text-white rounded-full shadow-lg shadow-coral/30 flex items-center justify-center text-2xl hover:bg-coral-light transition-colors"
+            className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[linear-gradient(135deg,#1d160f_0%,#3a2b19_100%)] text-[#fff8ec] rounded-full shadow-[0_18px_40px_rgba(120,88,39,0.18)] flex items-center justify-center text-2xl transition-transform"
             aria-label="打开聊天"
           >
             🤖
@@ -98,7 +98,7 @@ export default function Chatbot() {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-6 right-6 z-50 w-[360px] max-w-[calc(100vw-2rem)] h-[500px] max-h-[calc(100vh-3rem)] bg-[#1e1e32] rounded-2xl shadow-2xl border border-border flex flex-col overflow-hidden"
+            className="fixed bottom-6 right-6 z-50 w-[360px] max-w-[calc(100vw-2rem)] h-[500px] max-h-[calc(100vh-3rem)] bg-[rgba(255,251,244,0.94)] rounded-[1.5rem] shadow-[0_28px_70px_rgba(120,88,39,0.14)] border border-border flex flex-col overflow-hidden backdrop-blur-xl"
           >
             {/* Header */}
             <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-cream">
@@ -113,7 +113,7 @@ export default function Chatbot() {
               </div>
               <button
                 onClick={() => setOpen(false)}
-                className="p-1.5 hover:bg-coral/10 rounded-lg transition-colors"
+                className="p-1.5 hover:bg-sunny/20 rounded-lg transition-colors"
                 aria-label="关闭聊天"
               >
                 <X size={18} className="text-text-muted" />
@@ -134,8 +134,8 @@ export default function Chatbot() {
                   <div
                     className={`max-w-[80%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
                       msg.role === "user"
-                        ? "bg-coral text-white rounded-br-md"
-                        : "bg-cream text-text rounded-bl-md"
+                        ? "bg-[linear-gradient(135deg,#1d160f_0%,#3a2b19_100%)] text-[#fff8ec] rounded-br-md"
+                        : "bg-[rgba(255,248,238,0.92)] text-text rounded-bl-md border border-border"
                     }`}
                   >
                     {msg.content}
@@ -148,7 +148,7 @@ export default function Chatbot() {
                   animate={{ opacity: 1 }}
                   className="flex justify-start"
                 >
-                  <div className="bg-cream px-4 py-3 rounded-2xl rounded-bl-md">
+                  <div className="bg-[rgba(255,248,238,0.92)] px-4 py-3 rounded-2xl rounded-bl-md border border-border">
                     <div className="flex gap-1">
                       <span className="w-2 h-2 bg-text-muted rounded-full animate-bounce" />
                       <span
@@ -176,13 +176,13 @@ export default function Chatbot() {
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && sendMessage()}
                   placeholder="随便问点什么..."
-                  className="flex-1 px-4 py-2.5 bg-cream rounded-xl text-sm outline-none focus:ring-2 focus:ring-coral/30 transition-all"
+                  className="flex-1 px-4 py-2.5 bg-[rgba(255,248,238,0.92)] rounded-xl text-sm outline-none border border-border focus:ring-2 focus:ring-sunny/30 transition-all"
                   disabled={loading}
                 />
                 <button
                   onClick={sendMessage}
                   disabled={!input.trim() || loading}
-                  className="p-2.5 bg-coral text-white rounded-xl hover:bg-coral-light transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                  className="p-2.5 bg-[linear-gradient(135deg,#1d160f_0%,#3a2b19_100%)] text-[#fff8ec] rounded-xl transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
                   aria-label="发送"
                 >
                   <Send size={16} />

@@ -14,7 +14,8 @@ export default function Research() {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-black mb-3">
+          <p className="section-eyebrow mb-2">Research & inquiry</p>
+          <h2 className="section-title text-3xl md:text-5xl font-semibold mb-3">
             🔍 研究经历
           </h2>
           <p className="text-text-light max-w-xl mx-auto">
@@ -79,7 +80,7 @@ export default function Research() {
 
                 {/* Poster image for DP research */}
                 {item.hasPoster && (
-                  <div className="mb-4 rounded-xl overflow-hidden border border-border bg-card">
+                  <div className="mb-4 rounded-[1.25rem] overflow-hidden border border-border bg-[rgba(255,251,244,0.68)]">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/dp-poster.png`}
@@ -97,7 +98,7 @@ export default function Research() {
                   {item.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="tag-pill bg-cream text-text-light text-xs"
+                      className="tag-pill text-text-light text-xs"
                     >
                       {tag}
                     </span>
