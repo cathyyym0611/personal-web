@@ -114,7 +114,7 @@ export default function Hero() {
                 <img
                   src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/yy-profile.jpg`}
                   alt="Yingyu portrait"
-                  className="h-full w-full object-cover object-center grayscale"
+                  className="h-full w-full object-cover object-center"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#fff8ed] to-transparent" />
               </button>
