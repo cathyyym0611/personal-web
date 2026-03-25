@@ -102,13 +102,19 @@ export default function Hero() {
               className="order-1 md:order-2 flex justify-center"
               onClick={() => setClicked(true)}
             >
-              <span className="relative h-[320px] w-[250px] md:h-[420px] md:w-[320px] overflow-hidden rounded-[2rem] border border-[rgba(168,136,86,0.18)] bg-[linear-gradient(180deg,rgba(255,250,240,0.3)_0%,rgba(255,250,240,0.92)_68%,rgba(255,250,240,1)_100%)] shadow-[0_28px_70px_rgba(120,88,39,0.12)]">
+              <span className="relative h-[360px] w-[270px] md:h-[500px] md:w-[360px] flex items-end justify-center">
+                <span className="absolute inset-x-8 bottom-10 h-44 rounded-full bg-[radial-gradient(circle,rgba(243,223,128,0.52)_0%,rgba(243,223,128,0.12)_56%,transparent_78%)] blur-3xl" />
+                <span className="absolute inset-x-14 bottom-2 h-16 rounded-full bg-[rgba(255,248,236,0.95)] blur-2xl" />
                 <img
-                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/yy-profile.jpg`}
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/hero-cutout.png`}
                   alt="Yingyu portrait"
-                  className="h-full w-full object-cover object-center"
+                  className="relative z-10 h-full w-full object-contain object-bottom"
+                  style={{
+                    filter:
+                      "drop-shadow(0 0 16px rgba(255,248,236,0.95)) drop-shadow(0 12px 36px rgba(255,248,236,0.88)) drop-shadow(0 28px 55px rgba(120,88,39,0.16))",
+                  }}
                 />
-                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#fff8ed] to-transparent" />
+                <span className="absolute inset-x-10 bottom-0 h-20 bg-gradient-to-t from-[#fff8ed] via-[#fff8ed]/80 to-transparent blur-xl" />
               </span>
             </motion.button>
 
