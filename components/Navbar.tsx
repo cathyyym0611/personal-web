@@ -7,16 +7,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-  { label: "思考", href: "/behavioral-science", emoji: "🧠" },
-  { label: "足迹", href: "/experience", emoji: "🚀" },
+  { label: "认知", href: "/behavioral-science", emoji: "🧠" },
+  { label: "来路", href: "/experience", emoji: "🚀" },
   { label: "追问", href: "/research", emoji: "🔍" },
-  { label: "折腾", href: "/projects", emoji: "💡" },
-  { label: "在路上", href: "/travel", emoji: "✈️" },
-  { label: "手记", href: "/portfolio", emoji: "🎨" },
+  { label: "实验", href: "/projects", emoji: "💡" },
   { label: "找我", href: "/contact", emoji: "💌" },
 ];
 
-const wipHrefs = ["/travel", "/portfolio"];
+const wipHrefs = [];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
