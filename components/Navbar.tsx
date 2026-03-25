@@ -14,7 +14,7 @@ const navItems = [
   { label: "找我", href: "/contact", emoji: "💌" },
 ];
 
-const wipHrefs = [];
+const wipHrefs: string[] = [];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
