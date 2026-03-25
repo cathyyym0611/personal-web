@@ -81,8 +81,8 @@ export default function PeanutLogDetail() {
               },
               {
                 emoji: "📊",
-                title: "年度追星报告",
-                desc: "年底自动生成你的追星年度总结：去了几个城市、听了几场、花了多少、最爱的歌是哪首。",
+                title: "演出热力图",
+                desc: "可视化显示各省份演唱会、音乐节的场次数，帮你一眼看清自己追星足迹最密集的地方，也能回看哪些城市和地区留下了最多现场记忆。",
               },
             ].map((item) => (
               <div key={item.title} className="card-playful p-5">
