@@ -56,7 +56,7 @@ export default function About() {
               ))}
             </div>
             <div className="mt-4 flex flex-wrap gap-2">
-              {["宁波长大", "费城读研", "喜欢把想法快速做出来", "对人和 AI 的关系很好奇"].map((item) => (
+              {["喜欢把想法快速做出来", "对人和 AI 的关系很好奇"].map((item) => (
                 <span key={item} className="tag-pill text-xs text-text-light">
                   {item}
                 </span>
