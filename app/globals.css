@@ -156,6 +156,24 @@ body::before {
   background: linear-gradient(135deg, #261b11 0%, #43301d 100%);
 }
 
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: inline-flex;
+  align-items: center;
+  min-width: max-content;
+  animation: marquee 24s linear infinite;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 2.5rem;
+}
+
 @keyframes bounceIn {
   0% { transform: scale(0); opacity: 0; }
   50% { transform: scale(1.1); }

@@ -2,18 +2,11 @@
 
 import { motion } from "framer-motion";
 import { personalInfo } from "@/data/resume";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Hero() {
-  const [currentKeyword, setCurrentKeyword] = useState(0);
   const [clicked, setClicked] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentKeyword((prev) => (prev + 1) % personalInfo.keywords.length);
-    }, 2500);
-    return () => clearInterval(interval);
-  }, []);
+  const marqueeKeywords = [...personalInfo.keywords, ...personalInfo.keywords];
 
   return (
     <section className="relative min-h-screen overflow-hidden px-6 pt-28 pb-16">
@@ -68,18 +61,21 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.35 }}
-              className="mt-6 h-9 flex items-center justify-center text-sm md:text-base"
+              className="mt-6 mx-auto max-w-2xl overflow-hidden rounded-full border border-border bg-[rgba(255,251,244,0.7)]"
             >
-              <span className="text-text-muted mr-2">目前关键词</span>
-              <motion.span
-                key={currentKeyword}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.35 }}
-                className="font-semibold text-sunny-dark"
-              >
-                {personalInfo.keywords[currentKeyword]}
-              </motion.span>
+              <div className="flex items-center gap-4 px-5 py-3 text-sm md:text-base whitespace-nowrap">
+                <span className="text-text-muted shrink-0">目前关键词</span>
+                <div className="marquee-track">
+                  {marqueeKeywords.map((keyword, index) => (
+                    <span
+                      key={`${keyword}-${index}`}
+                      className="marquee-item font-semibold text-sunny-dark"
+                    >
+                      {keyword}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           </div>
 
