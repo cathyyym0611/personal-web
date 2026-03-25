@@ -69,7 +69,7 @@ export default function Projects() {
         </motion.div>
 
         <div className="relative">
-          <div className="absolute left-[146px] top-0 bottom-0 hidden md:block w-px bg-[linear-gradient(180deg,rgba(213,155,40,0.18),rgba(213,155,40,0.45),rgba(213,155,40,0.18))]" />
+          <div className="absolute left-[214px] top-0 bottom-0 hidden md:block w-px bg-[linear-gradient(180deg,rgba(213,155,40,0.18),rgba(213,155,40,0.45),rgba(213,155,40,0.18))]" />
           <div className="space-y-8">
             {timelineProjects.map((project, i) => {
             const detailHref = project.slug ? `/projects/${project.slug}` : null;
@@ -88,13 +88,13 @@ export default function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="grid md:grid-cols-[180px_1fr] gap-5 md:gap-8 items-start"
+                className="grid md:grid-cols-[250px_1fr] gap-5 md:gap-8 items-start"
               >
-                <div className="relative pt-2 z-10">
-                  <div className="text-sm font-semibold text-sunny-dark md:text-right pr-8 bg-[linear-gradient(90deg,transparent_0%,rgba(247,241,231,0.92)_16%,rgba(247,241,231,1)_100%)]">
+                <div className="relative pt-2 z-20">
+                  <div className="inline-flex max-w-[210px] md:ml-auto md:justify-end text-sm font-semibold text-sunny-dark md:text-right pr-10 pl-2 bg-[linear-gradient(90deg,rgba(247,241,231,0.96)_0%,rgba(247,241,231,1)_100%)] rounded-full">
                     {formatTimelinePeriod(project.period)}
                   </div>
-                  <div className="hidden md:block absolute right-[25px] top-2.5 h-3.5 w-3.5 rounded-full border-2 border-[rgba(213,155,40,0.45)] bg-[rgba(255,250,241,0.96)] shadow-[0_0_0_8px_rgba(255,245,224,0.8)]" />
+                  <div className="hidden md:block absolute right-[31px] top-2.5 h-3.5 w-3.5 rounded-full border-2 border-[rgba(213,155,40,0.45)] bg-[rgba(255,250,241,0.98)] shadow-[0_0_0_8px_rgba(255,245,224,0.95)]" />
                 </div>
                 <CardWrapper className={`card-playful overflow-hidden group block ${detailHref ? "hover:-translate-y-1 transition-all duration-200 cursor-pointer" : ""}`}>
                   {/* Card header */}
@@ -121,6 +121,16 @@ export default function Projects() {
                     <p className="text-sm text-text-light leading-relaxed mb-4">
                       {project.description}
                     </p>
+                    {"highlights" in project && (
+                      <div className="space-y-2 mb-4">
+                        {project.highlights.map((highlight) => (
+                          <div key={highlight} className="flex items-start gap-2 text-sm">
+                            <span className="mt-1 text-sunny-dark">✦</span>
+                            <span className="text-text">{highlight}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                     <div className="flex flex-wrap gap-1.5 mb-4">
                       {project.tags.map((tag) => (
                         <span

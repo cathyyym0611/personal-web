@@ -210,6 +210,10 @@ export const projects = [
     subtitle: "让背单词像讲故事一样自然",
     description:
       "把枯燥的单词表变成有上下文的记忆场景——AI 根据你正在学的词汇，即时生成故事和语境，让每个词都有画面感。不教你背，让你记住。",
+    highlights: [
+      "把词汇输入直接转成有画面感的 story-based memory experience",
+      "围绕真实学习痛点做的个人产品实验，强调快速验证与可直接上手",
+    ],
     tags: ["Vibe Coding", "AI", "语言学习", "EdTech"],
     emoji: "🎵",
     color: "#FF6B6B",
@@ -223,6 +227,10 @@ export const projects = [
     subtitle: "从简历到 offer 的全流程 AI 陪伴",
     description:
       "上传一次简历，AI 解析生成你的专属档案。每次投递时输入 JD，自动生成匹配度分析、经历优化、求职信、面试准备，把原本碎片化又高重复的求职准备流程串成一条更省力的工作流。",
+    highlights: [
+      "把匹配度分析、求职材料生成和面试准备串成一条完整 workflow",
+      "核心价值不是“帮你写”，而是帮你更高效地组织和 framing 真实经历",
+    ],
     tags: ["Vibe Coding", "AI", "求职", "产品设计"],
     emoji: "🎯",
     color: "#3370FF",
@@ -236,6 +244,10 @@ export const projects = [
     subtitle: "陈楚生粉丝的追星记忆库",
     description:
       "为粉丝设计的追星记录小程序：记录每一场演唱会和音乐节，自动统计听过的歌，追踪追星开销，把零散回忆整理成一份可以反复翻看的个人追星档案。",
+    highlights: [
+      "把线下活动、听歌轨迹和花费记录整合成个人 fan archive",
+      "从粉丝真实使用场景出发，强调轻量记录、长期回看和情感价值",
+    ],
     tags: ["Vibe Coding", "小程序", "粉丝社区"],
     emoji: "🥜",
     color: "#FFB347",
@@ -249,6 +261,10 @@ export const projects = [
     subtitle: "Behavioral Science × Conversational AI",
     description:
       "为 ComplexChaos 设计行为科学驱动的解决方案，目标是降低员工在使用 conversational AI 进行协作时的流失率。项目聚焦 misalignment、continuity 与 trust 等关键 friction，并产出可落地的 intervention 设计。",
+    highlights: [
+      "用 COM-B、EAST 与 trust framework 诊断长期协作场景中的 adoption friction",
+      "把 misalignment、continuity 与 privacy concern 转化为可执行的 intervention 方向",
+    ],
     tags: ["行为科学", "AI", "用户研究", "Capstone"],
     emoji: "🧪",
     color: "#4ECDC4",
@@ -262,6 +278,10 @@ export const projects = [
     subtitle: "Campus Ambassador Program",
     description:
       "为心理健康类 AI 应用 Sonia Health 从 0 到 1 搭建校园大使项目，设计招募物料与运营手册，在校内完成试点并验证早期规模化增长路径。",
+    highlights: [
+      "从 0 到 1 搭建 campus ambassador program，并完成校内试点落地",
+      "产出招新物料与运营手册，把校园增长思路沉淀成可复制的 playbook",
+    ],
     tags: ["用户增长", "Campus Strategy", "Project Lead"],
     emoji: "🚀",
     color: "#A78BFA",
@@ -275,6 +295,10 @@ export const projects = [
     subtitle: "Healthcare Market Demand Assessment",
     description:
       "为开发非接触式患者监测传感器的医疗科技初创公司做市场需求评估，通过 stakeholder interviews、surveys 与 use case 分析支持其 target segment 与 GTM 决策。",
+    highlights: [
+      "覆盖医院决策者、医护与照护者的多方访谈，识别需求差异",
+      "将研究结果转化为 target segment、use case 与 GTM messaging 的建议",
+    ],
     tags: ["Market Research", "Healthcare", "Project Lead"],
     emoji: "🩺",
     color: "#D59B28",
