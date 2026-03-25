@@ -5,13 +5,14 @@ import { projects } from "@/data/resume";
 import Link from "next/link";
 
 export default function Projects() {
-  const projectTimeline = [
-    { period: "2025 - Now", project: projects[0] },
-    { period: "2025 - Now", project: projects[1] },
-    { period: "2025 - Now", project: projects[2] },
-    { period: "2025 Spring", project: projects[3] },
-    { period: "2024 - 2025", project: projects[4] },
-  ];
+  const timelineProjects = [
+    projects.find((project) => project.slug === "vocabstory"),
+    projects.find((project) => project.slug === "job-assistant"),
+    projects.find((project) => project.slug === "peanut-log"),
+    projects.find((project) => project.slug === "complexchaos"),
+    projects.find((project) => project.slug === "ambient-intelligence"),
+    projects.find((project) => project.slug === "sonia-health"),
+  ].filter((project): project is (typeof projects)[number] => Boolean(project));
 
   return (
     <section id="projects" className="py-24 px-6">
@@ -34,7 +35,7 @@ export default function Projects() {
         <div className="relative">
           <div className="absolute left-[92px] top-0 bottom-0 hidden md:block w-px bg-[linear-gradient(180deg,rgba(213,155,40,0.18),rgba(213,155,40,0.45),rgba(213,155,40,0.18))]" />
           <div className="space-y-8">
-            {projectTimeline.map(({ period, project }, i) => {
+            {timelineProjects.map((project, i) => {
             const detailHref = project.slug ? `/projects/${project.slug}` : null;
             const CardWrapper = detailHref
               ? ({ children, className }: { children: React.ReactNode; className: string }) => (
@@ -46,7 +47,7 @@ export default function Projects() {
 
             return (
               <motion.div
-                key={`${period}-${project.title}`}
+                key={`${project.period}-${project.title}`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -55,7 +56,7 @@ export default function Projects() {
               >
                 <div className="relative pt-2">
                   <div className="text-sm font-semibold text-sunny-dark md:text-right">
-                    {period}
+                    {project.period}
                   </div>
                   <div className="hidden md:block absolute right-[17px] top-2.5 h-3.5 w-3.5 rounded-full border-2 border-[rgba(213,155,40,0.45)] bg-[rgba(255,250,241,0.96)] shadow-[0_0_0_8px_rgba(255,245,224,0.8)]" />
                 </div>

@@ -9,10 +9,6 @@ const showcaseCards = [
     subtitle: "为早期团队做用户与增长咨询",
     items: [
       {
-        label: "Cosmable",
-        text: "围绕点评与留存设计增长策略，推动核心互动指标提升。",
-      },
-      {
         label: "Sonia Health",
         text: "从 0 到 1 搭建校园大使项目，验证早期用户获取路径。",
       },
