@@ -63,8 +63,7 @@ export default function Hero() {
               transition={{ delay: 0.35 }}
               className="mt-6 mx-auto max-w-2xl overflow-hidden rounded-full border border-border bg-[rgba(255,251,244,0.7)]"
             >
-              <div className="flex items-center gap-4 px-5 py-3 text-sm md:text-base whitespace-nowrap">
-                <span className="text-text-muted shrink-0">目前关键词</span>
+              <div className="px-5 py-3 text-sm md:text-base whitespace-nowrap">
                 <div className="marquee-track">
                   {marqueeKeywords.map((keyword, index) => (
                     <span
