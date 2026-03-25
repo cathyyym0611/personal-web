@@ -89,9 +89,21 @@ export default function Hero() {
                 <span className="inline-flex h-2.5 w-2.5 rounded-full bg-sunny-dark" />
                 Available for new opportunities
               </div>
-              <p className="mt-5 max-w-xs text-sm leading-relaxed text-text-light">
-                宾大行为科学硕士，持续在 AI、用户理解、产品落地和真实世界问题之间来回穿梭。
-              </p>
+              <div className="mt-5 space-y-4 max-w-sm">
+                <p className="text-sm leading-relaxed text-text-light">
+                  宾大行为科学硕士，持续在 AI、用户理解、产品落地和真实世界问题之间来回穿梭。
+                </p>
+                <div className="card-playful p-4">
+                  <p className="text-xs uppercase tracking-[0.18em] text-text-muted mb-2">
+                    Right now
+                  </p>
+                  <p className="text-sm text-text leading-relaxed">
+                    关注 <span className="font-semibold text-sunny-dark">AI trust</span>、
+                    <span className="font-semibold text-sunny-dark"> behavior change</span> 和
+                    <span className="font-semibold text-sunny-dark"> product strategy</span>，想把抽象问题做成真正有人会用的体验。
+                  </p>
+                </div>
+              </div>
             </motion.div>
 
             <motion.button
@@ -102,11 +114,11 @@ export default function Hero() {
               className="order-1 md:order-2 flex justify-center"
               onClick={() => setClicked(true)}
             >
-              <span className="relative h-[360px] w-[270px] md:h-[500px] md:w-[360px] flex items-end justify-center">
-                <span className="absolute inset-x-8 bottom-10 h-44 rounded-full bg-[radial-gradient(circle,rgba(243,223,128,0.52)_0%,rgba(243,223,128,0.12)_56%,transparent_78%)] blur-3xl" />
-                <span className="absolute inset-x-14 bottom-2 h-16 rounded-full bg-[rgba(255,248,236,0.95)] blur-2xl" />
+              <span className="relative h-[380px] w-[320px] md:h-[560px] md:w-[470px] flex items-end justify-center">
+                <span className="absolute inset-x-10 bottom-14 h-52 rounded-full bg-[radial-gradient(circle,rgba(243,223,128,0.52)_0%,rgba(243,223,128,0.12)_56%,transparent_78%)] blur-3xl" />
+                <span className="absolute inset-x-16 bottom-2 h-16 rounded-full bg-[rgba(255,248,236,0.95)] blur-2xl" />
                 <img
-                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/hero-cutout.png`}
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/hero-balloon.png`}
                   alt="Yingyu portrait"
                   className="relative z-10 h-full w-full object-contain object-bottom"
                   style={{
@@ -127,6 +139,17 @@ export default function Hero() {
               <p className="max-w-sm text-sm md:text-base leading-relaxed text-text-light md:text-right">
                 passionate about turning ambiguity into structure, and making AI products feel warm, useful, and human.
               </p>
+              <div className="mt-4 space-y-3 max-w-sm md:text-right">
+                <div className="card-playful p-4">
+                  <p className="text-xs uppercase tracking-[0.18em] text-text-muted mb-2">
+                    What I build
+                  </p>
+                  <p className="text-sm text-text-light leading-relaxed">
+                    从 <span className="font-semibold text-sunny-dark">vibe coding</span> 小产品，到
+                    <span className="font-semibold text-sunny-dark"> research-backed interventions</span>，我喜欢把想法快速变成可以被验证的东西。
+                  </p>
+                </div>
+              </div>
               <div className="mt-6 flex flex-wrap gap-3 md:justify-end">
                 <a href="#about" className="soft-button soft-button-primary">
                   认识我 →
