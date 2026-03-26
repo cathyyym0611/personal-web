@@ -78,18 +78,14 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          <div className="mt-10 grid gap-8 md:grid-cols-[280px_auto_300px] md:items-center">
+          <div className="mt-10 grid gap-8 md:grid-cols-[240px_minmax(420px,1fr)_260px] md:items-center">
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
               className="order-2 md:order-1 flex flex-col items-start"
             >
-              <div className="soft-button w-fit bg-[rgba(255,253,247,0.92)]">
-                <span className="inline-flex h-2.5 w-2.5 rounded-full bg-sunny-dark" />
-                Available for new opportunities
-              </div>
-              <div className="card-playful mt-5 p-5 max-w-[280px]">
+              <div className="card-playful p-5 max-w-[220px] min-h-[280px] flex items-center">
                 <p className="text-sm leading-relaxed text-text-light">
                   关注行为科学、AI 和产品设计之间的交叉地带，也在持续把研究兴趣变成真实可用的项目。重点在看 AI trust、 behavior change 和 product strategy，想理解什么样的系统会让人真正愿意持续使用。
                 </p>
@@ -104,8 +100,8 @@ export default function Hero() {
               className="order-1 md:order-2 flex justify-center"
               onClick={() => setClicked(true)}
             >
-              <span className="relative h-[380px] w-[320px] md:h-[560px] md:w-[470px] flex items-end justify-center">
-                <span className="absolute inset-x-10 bottom-14 h-52 rounded-full bg-[radial-gradient(circle,rgba(243,223,128,0.52)_0%,rgba(243,223,128,0.12)_56%,transparent_78%)] blur-3xl" />
+              <span className="relative h-[420px] w-[360px] md:h-[640px] md:w-[560px] flex items-end justify-center">
+                <span className="absolute inset-x-10 bottom-14 h-56 rounded-full bg-[radial-gradient(circle,rgba(243,223,128,0.52)_0%,rgba(243,223,128,0.12)_56%,transparent_78%)] blur-3xl" />
                 <span className="absolute inset-x-16 bottom-2 h-16 rounded-full bg-[rgba(255,248,236,0.95)] blur-2xl" />
                 <img
                   src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/hero-balloon.png`}
@@ -124,15 +120,15 @@ export default function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="order-3"
+              className="order-3 md:pr-6"
             >
-              <div className="card-playful p-6 max-w-[300px] ml-auto">
+              <div className="card-playful p-5 max-w-[220px] min-h-[280px] ml-auto flex flex-col justify-between">
                 <p className="text-sm leading-relaxed text-text-light">
                   从 <span className="font-semibold text-sunny-dark">vibe coding</span> 小产品，到
                   <span className="font-semibold text-sunny-dark"> research-backed interventions</span>，
                   我喜欢把想法快速变成可以被验证、被使用、也能继续迭代的东西。
                 </p>
-                <div className="mt-6 flex flex-wrap gap-3">
+                <div className="mt-6 flex flex-col gap-3">
                   <a href="#about" className="soft-button soft-button-primary">
                     认识我 →
                   </a>
