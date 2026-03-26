@@ -39,7 +39,7 @@ export default function Hero() {
                 <div className="mt-6 flex items-center gap-5 text-text">
                   <span className="hidden md:block h-px w-28 bg-text/70" />
                   <p className="display-serif text-[2rem] md:text-[3.2rem] leading-none">
-                    Behavioral Scientist,
+                    Curious Builder,
                   </p>
                   <span className="text-3xl md:text-5xl">✦</span>
                 </div>
@@ -100,11 +100,11 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.75 }}
-              className="relative flex justify-center md:justify-end"
+              className="relative flex justify-center md:justify-end md:-mt-10"
             >
-              <div className="relative h-[430px] w-[340px] md:h-[720px] md:w-[620px] flex items-end justify-center">
-                <div className="absolute inset-x-14 bottom-16 h-56 rounded-full bg-[radial-gradient(circle,rgba(243,223,128,0.48)_0%,rgba(243,223,128,0.08)_58%,transparent_78%)] blur-3xl" />
-                <div className="absolute inset-x-20 bottom-3 h-20 rounded-full bg-[rgba(255,248,236,0.96)] blur-2xl" />
+              <div className="relative h-[390px] w-[340px] md:h-[620px] md:w-[620px] flex items-end justify-center">
+                <div className="absolute inset-x-14 bottom-12 h-52 rounded-full bg-[radial-gradient(circle,rgba(243,223,128,0.48)_0%,rgba(243,223,128,0.08)_58%,transparent_78%)] blur-3xl" />
+                <div className="absolute inset-x-20 bottom-0 h-16 rounded-full bg-[rgba(255,248,236,0.96)] blur-2xl" />
                 <img
                   src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/hero-balloon.png`}
                   alt="Yingyu portrait"
