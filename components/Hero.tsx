@@ -78,7 +78,7 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          <div className="mt-10 grid gap-10 md:grid-cols-[320px_auto_320px] md:items-center">
+          <div className="mt-10 grid gap-8 md:grid-cols-[220px_auto_360px] md:items-center">
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
@@ -89,30 +89,9 @@ export default function Hero() {
                 <span className="inline-flex h-2.5 w-2.5 rounded-full bg-sunny-dark" />
                 Available for new opportunities
               </div>
-              <div className="mt-5 max-w-sm space-y-4">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-text-muted mb-2">
-                    At a glance
-                  </p>
-                  <p className="text-sm leading-relaxed text-text-light">
-                    宾大行为科学硕士，持续在 AI、用户理解、产品落地和真实世界问题之间来回穿梭。
-                  </p>
-                </div>
-                <div className="card-playful p-5 space-y-3">
-                  <p className="text-xs uppercase tracking-[0.18em] text-text-muted">
-                    Right now
-                  </p>
-                  <div className="space-y-2 text-sm text-text leading-relaxed">
-                    <p>
-                      关注 <span className="font-semibold text-sunny-dark">AI trust</span> 与
-                      <span className="font-semibold text-sunny-dark"> behavior change</span>
-                    </p>
-                    <p>
-                      也在思考 <span className="font-semibold text-sunny-dark">product strategy</span> 如何真正服务于人的决策与行动
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <p className="mt-5 max-w-[200px] text-sm leading-relaxed text-text-light">
+                宾大行为科学硕士，持续在 AI、用户理解、产品落地和真实世界问题之间来回穿梭。
+              </p>
             </motion.div>
 
             <motion.button
@@ -143,39 +122,50 @@ export default function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="order-3 flex flex-col items-start md:items-end"
+              className="order-3"
             >
-              <div className="max-w-sm md:text-right">
-                <p className="text-xs uppercase tracking-[0.2em] text-text-muted mb-2">
-                  Core approach
+              <div className="card-playful p-6 md:p-7 max-w-[360px] ml-auto">
+                <p className="text-xs uppercase tracking-[0.2em] text-text-muted mb-3">
+                  Overview
                 </p>
-                <p className="text-sm md:text-base leading-relaxed text-text-light">
-                  passionate about turning ambiguity into structure, and making AI products feel warm, useful, and human.
-                </p>
-              </div>
-              <div className="mt-4 max-w-sm w-full">
-                <div className="card-playful p-5 space-y-3 md:text-right">
-                  <p className="text-xs uppercase tracking-[0.18em] text-text-muted">
-                    What I build
-                  </p>
-                  <div className="space-y-2 text-sm text-text-light leading-relaxed">
-                    <p>
-                      从 <span className="font-semibold text-sunny-dark">vibe coding</span> 小产品，到
-                      <span className="font-semibold text-sunny-dark"> research-backed interventions</span>
+                <div className="space-y-5">
+                  <div>
+                    <p className="text-sm font-semibold text-text mb-2">
+                      我是谁
                     </p>
-                    <p>
-                      我喜欢把想法快速变成可以被验证、被使用、被继续迭代的东西
+                    <p className="text-sm leading-relaxed text-text-light">
+                      毛盈豫，关注行为科学、AI 和产品设计之间的交叉地带，也在持续把研究兴趣变成真实可用的项目。
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-text mb-2">
+                      现在在做什么
+                    </p>
+                    <p className="text-sm leading-relaxed text-text-light">
+                      重点在看 <span className="font-semibold text-sunny-dark">AI trust</span>、
+                      <span className="font-semibold text-sunny-dark"> behavior change</span> 和
+                      <span className="font-semibold text-sunny-dark"> product strategy</span>，想理解什么样的系统会让人真正愿意持续使用。
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-text mb-2">
+                      我做什么
+                    </p>
+                    <p className="text-sm leading-relaxed text-text-light">
+                      从 <span className="font-semibold text-sunny-dark">vibe coding</span> 小产品，到
+                      <span className="font-semibold text-sunny-dark"> research-backed interventions</span>，
+                      我喜欢把想法快速变成可以被验证、被使用、也能继续迭代的东西。
                     </p>
                   </div>
                 </div>
-              </div>
-              <div className="mt-6 flex flex-wrap gap-3 md:justify-end">
-                <a href="#about" className="soft-button soft-button-primary">
-                  认识我 →
-                </a>
-                <a href="#contact" className="soft-button">
-                  聊聊
-                </a>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <a href="#about" className="soft-button soft-button-primary">
+                    认识我 →
+                  </a>
+                  <a href="#contact" className="soft-button">
+                    聊聊
+                  </a>
+                </div>
               </div>
               {clicked && (
                 <p className="mt-4 text-sm font-medium text-sunny-dark">
