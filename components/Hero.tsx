@@ -32,10 +32,14 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
               >
-                <p className="text-[2.9rem] md:text-[6.1rem] leading-none tracking-[-0.08em] text-text">
-                  <span className="font-[300]">Hello!</span>{" "}
-                  <span className="font-black">I&apos;m Cathy</span>
-                </p>
+                <div className="text-text md:flex md:flex-nowrap md:items-end md:gap-3 whitespace-nowrap">
+                  <span className="block text-[2.9rem] md:text-[5.5rem] leading-none tracking-[-0.08em] font-[300]">
+                    Hello!
+                  </span>
+                  <span className="block text-[2.9rem] md:text-[5.5rem] leading-none tracking-[-0.08em] font-black">
+                    I&apos;m Cathy
+                  </span>
+                </div>
               </motion.div>
 
               <motion.p
@@ -93,7 +97,7 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.75 }}
-              className="relative flex justify-center md:justify-end md:mt-8"
+              className="relative flex justify-center md:justify-end md:pb-14"
             >
               <div className="relative h-[390px] w-[340px] md:h-[560px] md:w-[620px] flex items-end justify-center">
                 <div className="absolute inset-x-14 bottom-8 h-52 rounded-full bg-[radial-gradient(circle,rgba(243,223,128,0.48)_0%,rgba(243,223,128,0.08)_58%,transparent_78%)] blur-3xl" />
