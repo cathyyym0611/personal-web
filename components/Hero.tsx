@@ -78,30 +78,39 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-[1fr_auto_1fr] md:items-end">
+          <div className="mt-10 grid gap-10 md:grid-cols-[320px_auto_320px] md:items-center">
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="order-2 md:order-1"
+              className="order-2 md:order-1 flex flex-col items-start"
             >
               <div className="soft-button w-fit bg-[rgba(255,253,247,0.92)]">
                 <span className="inline-flex h-2.5 w-2.5 rounded-full bg-sunny-dark" />
                 Available for new opportunities
               </div>
-              <div className="mt-5 space-y-4 max-w-sm">
-                <p className="text-sm leading-relaxed text-text-light">
-                  宾大行为科学硕士，持续在 AI、用户理解、产品落地和真实世界问题之间来回穿梭。
-                </p>
-                <div className="card-playful p-4">
-                  <p className="text-xs uppercase tracking-[0.18em] text-text-muted mb-2">
+              <div className="mt-5 max-w-sm space-y-4">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-text-muted mb-2">
+                    At a glance
+                  </p>
+                  <p className="text-sm leading-relaxed text-text-light">
+                    宾大行为科学硕士，持续在 AI、用户理解、产品落地和真实世界问题之间来回穿梭。
+                  </p>
+                </div>
+                <div className="card-playful p-5 space-y-3">
+                  <p className="text-xs uppercase tracking-[0.18em] text-text-muted">
                     Right now
                   </p>
-                  <p className="text-sm text-text leading-relaxed">
-                    关注 <span className="font-semibold text-sunny-dark">AI trust</span>、
-                    <span className="font-semibold text-sunny-dark"> behavior change</span> 和
-                    <span className="font-semibold text-sunny-dark"> product strategy</span>，想把抽象问题做成真正有人会用的体验。
-                  </p>
+                  <div className="space-y-2 text-sm text-text leading-relaxed">
+                    <p>
+                      关注 <span className="font-semibold text-sunny-dark">AI trust</span> 与
+                      <span className="font-semibold text-sunny-dark"> behavior change</span>
+                    </p>
+                    <p>
+                      也在思考 <span className="font-semibold text-sunny-dark">product strategy</span> 如何真正服务于人的决策与行动
+                    </p>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -136,18 +145,28 @@ export default function Hero() {
               transition={{ delay: 0.6 }}
               className="order-3 flex flex-col items-start md:items-end"
             >
-              <p className="max-w-sm text-sm md:text-base leading-relaxed text-text-light md:text-right">
-                passionate about turning ambiguity into structure, and making AI products feel warm, useful, and human.
-              </p>
-              <div className="mt-4 space-y-3 max-w-sm md:text-right">
-                <div className="card-playful p-4">
-                  <p className="text-xs uppercase tracking-[0.18em] text-text-muted mb-2">
+              <div className="max-w-sm md:text-right">
+                <p className="text-xs uppercase tracking-[0.2em] text-text-muted mb-2">
+                  Core approach
+                </p>
+                <p className="text-sm md:text-base leading-relaxed text-text-light">
+                  passionate about turning ambiguity into structure, and making AI products feel warm, useful, and human.
+                </p>
+              </div>
+              <div className="mt-4 max-w-sm w-full">
+                <div className="card-playful p-5 space-y-3 md:text-right">
+                  <p className="text-xs uppercase tracking-[0.18em] text-text-muted">
                     What I build
                   </p>
-                  <p className="text-sm text-text-light leading-relaxed">
-                    从 <span className="font-semibold text-sunny-dark">vibe coding</span> 小产品，到
-                    <span className="font-semibold text-sunny-dark"> research-backed interventions</span>，我喜欢把想法快速变成可以被验证的东西。
-                  </p>
+                  <div className="space-y-2 text-sm text-text-light leading-relaxed">
+                    <p>
+                      从 <span className="font-semibold text-sunny-dark">vibe coding</span> 小产品，到
+                      <span className="font-semibold text-sunny-dark"> research-backed interventions</span>
+                    </p>
+                    <p>
+                      我喜欢把想法快速变成可以被验证、被使用、被继续迭代的东西
+                    </p>
+                  </div>
                 </div>
               </div>
               <div className="mt-6 flex flex-wrap gap-3 md:justify-end">
