@@ -32,9 +32,9 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
               >
-                <p className="text-[2.8rem] md:text-[5.8rem] leading-none tracking-[-0.07em] text-text">
-                  Hello! I&apos;m{" "}
-                  <span className="font-black text-text">Cathy</span>
+                <p className="text-[2.9rem] md:text-[6.1rem] leading-none tracking-[-0.08em] text-text">
+                  <span className="font-[300]">Hello!</span>{" "}
+                  <span className="font-black">I&apos;m Cathy</span>
                 </p>
               </motion.div>
 
@@ -42,7 +42,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.15, duration: 0.7 }}
-                className="mt-6 max-w-2xl text-base md:text-xl leading-relaxed text-text-light"
+                className="mt-10 max-w-2xl text-base md:text-xl leading-relaxed text-text-light"
               >
                 我是毛盈豫，正在行为科学、AI 和产品设计的交叉地带持续探索。
                 我关心人为什么难以行动，也着迷于把这些理解转成更自然、
@@ -93,10 +93,10 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.75 }}
-              className="relative flex justify-center md:justify-end md:mt-2"
+              className="relative flex justify-center md:justify-end md:mt-8"
             >
-              <div className="relative h-[390px] w-[340px] md:h-[590px] md:w-[620px] flex items-end justify-center">
-                <div className="absolute inset-x-14 bottom-10 h-52 rounded-full bg-[radial-gradient(circle,rgba(243,223,128,0.48)_0%,rgba(243,223,128,0.08)_58%,transparent_78%)] blur-3xl" />
+              <div className="relative h-[390px] w-[340px] md:h-[560px] md:w-[620px] flex items-end justify-center">
+                <div className="absolute inset-x-14 bottom-8 h-52 rounded-full bg-[radial-gradient(circle,rgba(243,223,128,0.48)_0%,rgba(243,223,128,0.08)_58%,transparent_78%)] blur-3xl" />
                 <div className="absolute inset-x-20 bottom-0 h-16 rounded-full bg-[rgba(255,248,236,0.96)] blur-2xl" />
                 <img
                   src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/hero-balloon.png`}
