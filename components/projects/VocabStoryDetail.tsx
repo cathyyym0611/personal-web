@@ -124,6 +124,10 @@ export default function VocabStoryDetail() {
                 className="w-full h-auto block"
               >
                 <source
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/videos/vocabstory-demo.mp4`}
+                  type="video/mp4"
+                />
+                <source
                   src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/videos/vocabstory-demo.MOV`}
                   type="video/quicktime"
                 />
