@@ -112,11 +112,27 @@ export default function VocabStoryDetail() {
           </div>
         </Section>
 
-        {/* Demo 占位 */}
+        {/* Demo */}
         <Section delay={0.3}>
-          <div className="card-playful p-8 text-center">
-            <p className="text-text-muted text-sm mb-2">📸 产品截图 / Demo 视频</p>
-            <p className="text-xs text-text-muted">上传后将展示在这里</p>
+          <div className="card-playful p-6">
+            <p className="text-text-muted text-sm mb-4">🎬 产品 Demo</p>
+            <div className="rounded-[1.25rem] overflow-hidden border border-border bg-[rgba(255,251,244,0.8)]">
+              <video
+                controls
+                playsInline
+                preload="metadata"
+                className="w-full h-auto block"
+              >
+                <source
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/videos/vocabstory-demo.MOV`}
+                  type="video/quicktime"
+                />
+                你的浏览器暂不支持视频播放。
+              </video>
+            </div>
+            <p className="text-xs text-text-muted mt-3">
+              点击播放即可在当前页面查看 Demo
+            </p>
           </div>
         </Section>
       </div>
